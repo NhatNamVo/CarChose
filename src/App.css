@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -35,4 +36,58 @@
   to {
     transform: rotate(360deg);
   }
+}
+#renderCar{
+  position: relative;
+  height: 150px;
+}
+
+.spritespin-instance{
+  position: absolute!important;
+  overflow: visible!important;
+  width: 100%!important;
+  height: 500px!important;
+
+}
+
+.spritespin-canvas{
+  width: auto!important;
+  height: auto!important;
+  position: absolute!important;
+  left: 50%!important;
+  top: 10%!important;
+  transform: translate(-50%,-50%);
+  z-index: -10;
+}
+#spritespin{
+  position: relative;
+  z-index: 1;
+  top: 50%;
+}
+
+@media screen and (max-width:992px) {
+  .spritespin-canvas{
+    top: 15%!important;
+  }
+  #renderCar{
+    height: 200px;
+  }
+}
+
+@media screen and (max-width:512px) {
+  .spritespin-instance{
+    width: 150%!important;
+  }
+  .spritespin-canvas{
+    top: -10%!important;
+    left: 35%!important;
+    transform: translate(-50%,-50%);
+    height: 300px!important;
+  }
+  #renderCar{
+    height: 130px;
+  }
+}
+.actived{
+  background-color: rgb(142, 144, 243)
 }
